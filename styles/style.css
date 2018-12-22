@@ -5,6 +5,10 @@ body{
   background-image: url(../images/Background-image-1.jpg);
   background-size: cover;
   overflow: hidden;
+  color: aliceblue
+}
+svg{
+  color: aliceblue;
 }
 .grid-container{
   display: grid;
@@ -162,36 +166,36 @@ body{
 }
 .day1{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
 }
 .day2{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
 
 }
 .day3{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
 
 }
 .day4{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
 
 }
 .day5{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
 
 }
 .day6{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
 
 }
 .day7{
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 100px 1fr;
 
 }
 .i1{
