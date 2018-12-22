@@ -7,9 +7,6 @@ body{
   overflow: hidden;
   color: aliceblue
 }
-svg{
-  color: aliceblue;
-}
 .grid-container{
   display: grid;
 }
