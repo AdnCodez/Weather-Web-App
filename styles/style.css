@@ -1,0 +1,90 @@
+html{
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-image: url(../images/Background-image-1.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+.grid-container{
+  display: grid;
+}
+.grid{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 122px 1fr 340px;  
+  grid-gap: 10px; 
+}
+.wrapper1{
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: 1fr 1fr;
+}
+.item1{
+  font-size: 2.2rem;
+  align-self: center;
+}
+.icon1{
+  align-self: center;
+  grid-column: end;
+}
+
+.wrapper2{
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: 40px 350px 40px 1fr;
+  grid-gap: 10px;
+}
+
+.item2{
+  /* border: 1px solid black; */
+  /* border-radius: 12px; */
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px; 
+  font-size: 1.8rem;
+
+}
+.icon2{
+  width: 38px;
+  align-self: center;
+}
+.icon3{
+  width: 38px;
+  align-self: center;
+}
+.icon4{
+  align-self: center;
+  grid-column: end;
+}
+
+.icon-size{
+  height: 36px;
+  width: 36px;
+}
+.round-rec{
+  background-color: burlywood;
+  border: solid 1px blue;
+  height: 90%;
+  width: 97vw;
+  border-radius: 30px;
+  justify-self: center;
+  align-self: center
+}
+.itm1{
+  grid-row: 1/2;
+}
+.itm2{
+  grid-row: 2/3;
+
+}
+.itm3{
+  grid-row: 3/-1;
+}
+.grid-it{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.border-it{
+  border-right: 1px solid salmon;
+}
