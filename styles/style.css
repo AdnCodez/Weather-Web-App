@@ -139,7 +139,7 @@ body{
 
 .round-rec{
   background-color: rgba(82, 70, 116, 60%);
-  border: solid 1px salmon;
+  border: solid 2px salmon;
   height: 90%;
   width: 97vw;
   border-radius: 30px;
@@ -161,7 +161,8 @@ body{
   grid-template-columns: repeat(7, 1fr);
 }
 .border-it{
-  border-right: 2px solid salmon;
+  border-right: 1px solid salmon;
+  border-left: 1px solid salmon;
 }
 .day1{
   display: grid;
@@ -217,4 +218,86 @@ body{
   font-size: 3rem;
   align-self: flex-end;
   justify-self: center;
+}
+input{
+  background-color: rgba(82, 70, 116, 0%);
+  border: solid 1px white;
+  /* height: 90%; */
+  display: flex;
+  height: 95%;
+  width: 99%;
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  
+}
+.day1:hover{
+  position: relative;
+  bottom: 45px;
+  transform: scale(1.1);
+  background-color: rgba(82, 70, 116, 70%); 
+  transition: 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-bottom: 1px solid salmon;
+  border-top: 1px solid salmon;
+
+}
+.day2:hover{
+  position: relative;
+  bottom: 45px;
+  transform: scale(1.1);
+  background-color: rgba(82, 70, 116, 70%); 
+  transition: 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-bottom: 1px solid salmon;
+  border-top: 1px solid salmon;
+
+}
+.day3:hover{
+  position: relative;
+  bottom: 45px;
+  transform: scale(1.1);
+  background-color: rgba(82, 70, 116, 70%); 
+  transition: 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-bottom: 1px solid salmon;
+  border-top: 1px solid salmon;
+
+}
+.day4:hover{
+  position: relative;
+  bottom: 45px;
+  transform: scale(1.1);
+  background-color: rgba(82, 70, 116, 70%); 
+  transition: 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-bottom: 1px solid salmon;
+  border-top: 1px solid salmon;
+
+}
+.day5:hover{
+  position: relative;
+  bottom: 45px;
+  transform: scale(1.1);
+  background-color: rgba(82, 70, 116, 70%); 
+  transition: 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-bottom: 1px solid salmon;
+  border-top: 1px solid salmon;
+
+}
+.day6:hover{
+  position: relative;
+  bottom: 45px;
+  transform: scale(1.1);
+  background-color: rgba(82, 70, 116, 70%); 
+  transition: 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-bottom: 1px solid salmon;
+  border-top: 1px solid salmon;
+
+}
+.day7:hover{
+  position: relative;
+  bottom: 45px;
+  transform: scale(1.1);
+  background-color: rgba(82, 70, 116, 70%); 
+  transition: 800ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-bottom: 1px solid salmon;
+  border-top: 1px solid salmon;
+
 }
