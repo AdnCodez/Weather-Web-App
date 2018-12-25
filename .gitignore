@@ -1,3 +1,5 @@
+.vscode/
+.idea/
 trash/
 Back-end/django_env/
 env
@@ -6,5 +8,3 @@ env
 __pycache__
 .idea/
 .vscode/
-.idea
-.vscode
