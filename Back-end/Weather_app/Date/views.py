@@ -3,7 +3,7 @@ from django.views.generic import TemplateView
 
 
 class HomePageView(TemplateView):
-  template_name = "index.html"
+  template_name = "Date/index.html"
   
 
 
