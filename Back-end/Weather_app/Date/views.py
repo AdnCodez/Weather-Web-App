@@ -20,7 +20,7 @@ def epoch_to_human(value):
 
     return result
 
-
+  
 def index(request):
     API_Secret_key = "becbbc15c724474fdab20f1d500ac33b"
     API_URL = "https://api.darksky.net/forecast/{0}/{1},{2}"

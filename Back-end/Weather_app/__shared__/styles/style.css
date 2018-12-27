@@ -27,6 +27,7 @@ body{
 .item1{
   font-size: 2.1rem;
   align-self: center;
+  margin-left: 4px;
 }
 .icon1{
   align-self: center;
@@ -87,11 +88,10 @@ body{
   font-weight: 300;
   text-align: start; 
   align-self: center;
-  color: black 
 }
 .grid3{
   display: grid;
-  grid-template-columns: 1fr 20px 240px 50px 18px 100px 100px 1fr;
+  grid-template-columns: 1fr 20px 240px 50px 100px 100px 1fr;
   /* grid-gap: 2px */
   text-align: center;
   margin-bottom: 1rem;
@@ -106,23 +106,20 @@ body{
   top: 2px;
 }
 #summary{
-  justify-self: end;
+  justify-self: center;
   grid-column: 3/4;
   font-size: 1.8rem;
   font-weight: 500;
 }
-#slash{
-  justify-self: center;
-}
 #wind{
-  justify-self: end;
+  justify-self: center;
 }
 #wind-icon{
   position: relative;
   top: 5px;
 }
 #speed-unit{
-  justify-self: start;
+  justify-self: center;
 }
 .grid4{
   display: grid;
@@ -134,6 +131,8 @@ body{
 .ext-summary{
   grid-column: 2/3;
   font-size: 2rem;
+  font-size: 1.9rem;
+  line-height: 1.2;
 }
 .grid5{
   display: grid;
@@ -160,7 +159,7 @@ li {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 90%;
+  width: 80%;
   transform: translate(-50%, -50%);
   border-bottom: 3px solid white;
 }
@@ -177,8 +176,6 @@ li {
 .open-state .more3:after {
   transform: translate(-50%, -50%) rotate(0);
 }
-
-
 #high{
   justify-self: start;
   grid-column: 2/3;
@@ -194,7 +191,6 @@ li {
 }
 #temp-unit2{
   justify-self: start;
-  color: black;
 }
 a.svg:after {
   content: ""; 
@@ -302,7 +298,6 @@ a.svg:after {
   justify-self: start;
   margin-left: 6px;
   /* font-weight: 300; */
-  color: black;
 }
 input{
   background-color: rgba(82, 70, 116, 0%);
@@ -372,4 +367,16 @@ input{
   transform: scale(1);
   background-color: rgba(82, 70, 116, 70%); 
   transition: 444ms cubic-bezier(.66,-0.4,.53,1.44); 
+}
+.degree{
+  color: white;
+}
+.speed{
+  color: white;
+}
+.temperature{
+  color: white;
+}
+.speedVal{
+  color: white;
 }
