@@ -17,14 +17,24 @@ def epoch_to_human(value):
     result += ', ' + datetime.datetime.fromtimestamp(value).strftime('%d')
     result += ' ' + datetime.datetime.fromtimestamp(value).strftime('%B')
     result += ' ' + datetime.datetime.fromtimestamp(value).strftime('%Y')
-
     return result
+def get_location():
+  headers = {
+    'Accept': 'application/json'
+  }
+  KEY = '3f55b07b200471d3ee97ce323483420208527f68fb6d3f0e57df3db5'
+  response = requests.get('https://api.ipdata.co?api-key={}'.format(KEY), headers=headers)
 
-  
+  response_body = response.json()
+  latitude = response_body['latitude']
+  longitude = response_body['longitude']
+  city = response_body['city']
+  return latitude, longitude, city
+
 def index(request):
     API_Secret_key = "becbbc15c724474fdab20f1d500ac33b"
     API_URL = "https://api.darksky.net/forecast/{0}/{1},{2}"
-    resp = requests.get(API_URL.format(API_Secret_key,34.24 ,-6.541))
+    resp = requests.get(API_URL.format(API_Secret_key,get_location()[0] ,get_location()[1]))
     # # print(resp)
     data = resp.json()
     # TIME
@@ -48,7 +58,7 @@ def index(request):
 
     weather = {
       'time': current_time_human,
-      'city': 'X',
+      'city': get_location()[2],
       'temp_F': current_temp_inF,
       'temp_C': current_temp_inC,
       'wind_kph': current_wind_speed_kph,

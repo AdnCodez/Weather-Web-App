@@ -3,18 +3,6 @@
 *:after {
   box-sizing: border-box;
 }
-/*
-html {
-  font-family: "Roboto Condensed", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-  color: #ECEFF1;
-  background-image: radial-gradient(#4f6875, #263238);
-} 
-*/
 .toggle {
   position: relative;
   display: block;
@@ -25,15 +13,18 @@ html {
   outline: 0;
   text-decoration: none;
   border-radius: 100px;
-  border: 2px solid #546E7A;
-  background-color: #263238;
+  /* border: 2px solid #546E7A; */
+  border: 2px solid #ffffff80;
+  /* background-color: #263238; */
+  background-color: #26323800;
   transition: all 500ms;
 }
 .toggle:active {
   background-color: #1c2429;
 }
 .toggle:hover:not(.toggle--moving):after {
-  background-color: #455A64;
+  /* background-color: #455A64; */
+  background-color: rgb(64, 54, 105);
 }
 .toggle:after {
   display: block;
@@ -47,7 +38,8 @@ html {
   text-transform: uppercase;
   font-size: 20px;
   color: white;
-  background-color: #37474F;
+  /* background-color: #37474F; */
+  background-color: #493F70;
   border: 2px solid;
   /* transition: all 500ms; */
   transition: all 300ms;
@@ -56,7 +48,8 @@ html {
   content: "°C";
   /* border-radius: 50px 5px 5px 50px; */
   border-radius: 38px;
-  color: #66BB6A;
+  /* color: #66BB6A; */
+  color: #F5D594;
   font-weight: 400;
   font-size: 1.7rem;
 }
@@ -65,7 +58,8 @@ html {
   /* border-radius: 5px 50px 50px 5px; */
   border-radius: 38px;
   transform: translate(100%, 0);
-  color: #f44336;
+  /* color: #f44336; */
+  color: salmon;
   font-weight: 400;
   font-size: 1.7rem;
 }
@@ -74,7 +68,8 @@ html {
 }
 .toggle--moving:after {
   color: transparent;
-  border-color: #435862;
+  /* border-color: #435862; */
+  border-color: #ffffff;
   background-color: #222c31;
   transition: color 0s, transform 500ms, border-radius 500ms, background-color 500ms;
 }
@@ -89,15 +84,16 @@ html {
   outline: 0;
   text-decoration: none;
   border-radius: 100px;
-  border: 2px solid #546E7A;
-  background-color: #263238;
+  border: 2px solid #ffffff80;
+  background-color: #26323800;
   transition: all 500ms;
 }
 .toggle2:active {
   background-color: #1c2429;
 }
 .toggle2:hover:not(.toggle--moving):after {
-  background-color: #455A64;
+  /* background-color: #455A64; */
+  background-color: rgb(64, 54, 105);
 }
 .toggle2:after {
   display: block;
@@ -111,7 +107,8 @@ html {
   text-transform: uppercase;
   font-size: 20px;
   color: white;
-  background-color: #37474F;
+  /* background-color: #37474F; */
+  background-color: #493F70;
   border: 2px solid;
   transition: all 500ms;
 }
@@ -120,7 +117,8 @@ html {
   content: "kph";
   /* border-radius: 50px 5px 5px 50px; */
   border-radius: 38px;
-  color: #66BB6A;
+  /* color: #66BB6A; */
+  color: #F5D594;
   font-weight: 500;
   font-size: 1.3rem;
 }
@@ -128,7 +126,8 @@ html {
   content: "mph";
   /* border-radius: 5px 50px 50px 5px; */
   transform: translate(100%, 0);
-  color: #f44336;
+  /* color: #f44336; */
+  color: salmon;
   border-radius: 38px;
   font-weight: 500;
   font-size: 1.3rem;

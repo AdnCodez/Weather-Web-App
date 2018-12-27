@@ -11,6 +11,7 @@
       media="all" />
   <link rel="stylesheet" href="{% static 'styles/style.css' %}">
   <link rel="stylesheet" href="{% static 'styles/switch.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/icons.css' %}">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
   <title>Weather WW</title>
 </head>
@@ -30,7 +31,7 @@
         <img src="{% static 'styles/icons/gps-location.svg'%}" alt="gps location icon" class="icon-size">
       </div>
       <div class="item2">
-          <input type="text" class="search" placeholder="City or State" maxlength="19">
+          <input id='location' type="text" class="search" placeholder="{{ weather.city }}" maxlength="19" autocomplete='off'>
       </div>
       <div class="icon3">
         <img src="{% static 'styles/icons/search.svg'%}" alt="search icon" class="icon-size">
@@ -43,7 +44,18 @@
   <section id="current-weather" class="itm2">
     <div class="grid2">
       <div id="icon" class="main-icon">
-        <svg width="150" height="150" viewBox="0 0 190 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- .clear or .sunny -->
+      {% comment %} <div class="weatherIcon">
+        <div class="sunny">
+          <div class="inner"></div>
+        </div>
+      </div> {% endcomment %}
+      <div class="weatherIcon">
+        <div class="mostlysunny">
+          <div class="inner"></div>
+    		</div>
+      </div>
+        {% comment %} <svg width="150" height="150" viewBox="0 0 190 189" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
           <path d="M160.951 76.8814C160.951 103.419 139.324 124.932 112.646 124.932C85.9664 124.932 64.3407 103.419 64.3407 76.8814C64.3407 50.3439 85.9664 28.8305 112.646 28.8305C139.324 28.8305 160.951 50.3439 160.951 76.8814Z" fill="#FDD020"/>
           <path d="M112.646 19.2203C110.866 19.2203 109.425 17.786 109.425 16.0169V3.20339C109.425 1.43433 110.866 0 112.646 0C114.424 0 115.866 1.43433 115.866 3.20339V16.0169C115.866 17.786 114.424 19.2203 112.646 19.2203Z" fill="#FDD020"/>
@@ -59,7 +71,7 @@
           <rect width="190" height="189" fill="white"/>
           </clipPath>
           </defs>
-          </svg>          
+        </svg>           {% endcomment %}
       </div>
           <div id="temperature" class="main-temp temperature">{{ weather.temp_C }}</div>
           <div id="temp-unit1" class="main-unit degree">°C</div>
