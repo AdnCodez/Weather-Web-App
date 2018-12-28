@@ -29,7 +29,7 @@ body{
 .item1{
   font-size: 2.1rem;
   align-self: center;
-  margin-left: 18px;
+  /* margin-left: 18px; */
 }
 .icon1{
   align-self: center;
@@ -69,7 +69,6 @@ body{
   height: 36px;
   width: 36px;
 }
-
 .grid2{
   display: grid;
   grid-template-columns: 1fr 200px 200px 200px 1fr;
@@ -309,9 +308,8 @@ a.svg:after {
 input{
   background-color: rgba(82, 70, 116, 0%);
   border: solid 1px white;
-  /* height: 90%; */
   /* display: flex; */
-  /* height: 95%; */
+  height: 80%;
   width: 92%;
   text-align: center;
   font-size: 2rem;
@@ -387,3 +385,42 @@ input{
 .speedVal{
   color: aliceblue;
 }
+.search{
+  animation: hideshow 10s ease infinite;
+
+}
+/* Grow Rotate */
+.hvr-grow-rotate {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
+}
+
+
+/* PALETTE */
+/*
+Khaki
+#F5D594
+Copy
+Peru
+#C57750
+Copy
+Dark Slate Gray
+#281B3A
+Copy
+Dim Gray
+#7E4A58
+Copy
+Dark Slate Blue
+#493F70 
+*/
