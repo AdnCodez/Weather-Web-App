@@ -39,12 +39,16 @@ def get_location():
   city = response_body['city']
   return latitude, longitude, city
 
+# def currentTime(par):
+#       current_time = epoch_time()+(86400*par)
+#       return current_time
+
 def index(request):
     # TIME
     current_time = epoch_time()
     current_time_human = epoch_time_to_human(current_time)
     # CURRENT TEMPERATURE  °C MORE PRECISE
-    current_temp_inC = round(weather_api(get_location()[0], get_location()[1], epoch_time())["currently"]["temperature"])
+    # current_temp_inC = round(weather_api(get_location()[0], get_location()[1], epoch_time())["currently"]["temperature"])
     # CURRENT SUMMARY (SHORT)
     current_summary = weather_api(get_location()[0], get_location()[1], epoch_time())["currently"]["summary"]
     # CURRENT WIND SPEED Meters per second.
@@ -60,21 +64,76 @@ def index(request):
     if '-' in icon:
       icon = ''.join(icon.split('-')[:-1])
     else:
-      icon  
+      icon 
+
+    icon1 = weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*1))["currently"]["icon"]
+    if '-' in icon1:
+      icon1 = ''.join(icon1.split('-')[:-1])
+    else:
+      icon1
+    icon2 = weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*2))["currently"]["icon"]
+    if '-' in icon2:
+      icon2 = ''.join(icon2.split('-')[:-1])
+    else:
+      icon2  
+    icon3 = weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*3))["currently"]["icon"]
+    if '-' in icon3:
+      icon3 = ''.join(icon3.split('-')[:-1])
+    else:
+      icon3  
+    icon4 = weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*4))["currently"]["icon"]
+    if '-' in icon4:
+      icon4 = ''.join(icon4.split('-')[:-1])
+    else:
+      icon4  
+    icon5 = weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*5))["currently"]["icon"]
+    if '-' in icon5:
+      icon5 = ''.join(icon5.split('-')[:-1])
+    else:
+      icon5  
+    icon6 = weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*6))["currently"]["icon"]
+    if '-' in icon6:
+      icon6 = ''.join(icon6.split('-')[:-1])
+    else:
+      icon6  
+
     weather = {
       'time': current_time_human,
       'city': get_location()[2],
-      'temp_C': current_temp_inC,
+      'icon': icon,
       'wind_kph': current_wind_speed_kph,
       'summary_short': current_summary,
       'summary_extended': summary,
       'temp_high_C': temp_high_inC,
       'temp_low_C': temp_low_inC,
+
+      'temp_C': round(weather_api(get_location()[0], get_location()[1], epoch_time())["currently"]["temperature"]),
+      'temp_C1': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*1))["currently"]["temperature"]),
+      'temp_C2': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*2))["currently"]["temperature"]),
+      'temp_C3': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*3))["currently"]["temperature"]),
+      'temp_C4': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*4))["currently"]["temperature"]),
+      'temp_C5': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*5))["currently"]["temperature"]),
+      'temp_C6': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*6))["currently"]["temperature"]),
+
       'icon': icon,
-      'day_name': epoch_time_day_name(epoch_time()),
-      'weekdays': ls,
+      'icon1': icon1,
+      'icon2': icon2,
+      'icon3': icon3,
+      'icon4': icon4,
+      'icon5': icon5,
+      'icon6': icon6,
+
+      'days_name' : epoch_time_day_name(epoch_time()),
+      'days_name1': epoch_time_day_name(epoch_time()+(86400*1)),
+      'days_name2': epoch_time_day_name(epoch_time()+(86400*2)),
+      'days_name3': epoch_time_day_name(epoch_time()+(86400*3)),
+      'days_name4': epoch_time_day_name(epoch_time()+(86400*4)),
+      'days_name5': epoch_time_day_name(epoch_time()+(86400*5)),
+      'days_name6': epoch_time_day_name(epoch_time()+(86400*6)),
+      # 'weekdays': ls,
     }
     context = {'weather' : weather}
     return render(request, 'Date/index.html', context) #returns the index.html template
 
-print(ls.index(epoch_time_day_name(epoch_time())))
+# print(ls.index(epoch_time_day_name(epoch_time())))
+print(get_location())
