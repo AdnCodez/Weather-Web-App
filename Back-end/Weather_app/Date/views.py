@@ -136,4 +136,3 @@ def index(request):
     return render(request, 'Date/index.html', context) #returns the index.html template
 
 # print(ls.index(epoch_time_day_name(epoch_time())))
-print(get_location())
