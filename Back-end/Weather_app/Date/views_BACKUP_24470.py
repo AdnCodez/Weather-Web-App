@@ -107,7 +107,7 @@ def index(request):
       'temp_high_C': temp_high_inC,
       'temp_low_C': temp_low_inC,
 
-      'temp_C' : round(weather_api(get_location()[0], get_location()[1], epoch_time())["currently"]["temperature"]),
+      'temp_C': round(weather_api(get_location()[0], get_location()[1], epoch_time())["currently"]["temperature"]),
       'temp_C1': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*1))["currently"]["temperature"]),
       'temp_C2': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*2))["currently"]["temperature"]),
       'temp_C3': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*3))["currently"]["temperature"]),
@@ -115,7 +115,7 @@ def index(request):
       'temp_C5': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*5))["currently"]["temperature"]),
       'temp_C6': round(weather_api(get_location()[0], get_location()[1], epoch_time()+(86400*6))["currently"]["temperature"]),
 
-      'icon' : icon,
+      'icon': icon,
       'icon1': icon1,
       'icon2': icon2,
       'icon3': icon3,
@@ -136,4 +136,7 @@ def index(request):
     return render(request, 'Date/index.html', context) #returns the index.html template
 
 # print(ls.index(epoch_time_day_name(epoch_time())))
+<<<<<<< HEAD
+=======
 print(get_location())
+>>>>>>> ae0c43fc9782017ec51bcfc1c95ef5fec6823a96

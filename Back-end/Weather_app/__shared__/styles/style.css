@@ -285,7 +285,7 @@ a.svg:after {
 .i2{
   grid-row: 2/3;
   grid-column: 1/-1;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   align-self: center;
   justify-self: center;
 }
@@ -295,6 +295,7 @@ a.svg:after {
   font-size: 3rem;
   align-self: flex-end;
   justify-self: end;
+  margin-right: 15px;
 }
 .temp-unit3{
   grid-column: 2;
@@ -302,7 +303,7 @@ a.svg:after {
   font-size: 3rem;
   align-self: flex-end;
   justify-self: start;
-  margin-left: 6px;
+  /* margin-left: 6px;   */
   /* font-weight: 300; */
 }
 input{
@@ -404,6 +405,10 @@ input{
 .hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
   -webkit-transform: scale(1.1) rotate(4deg);
   transform: scale(1.1) rotate(4deg);
+}
+.week-icon{
+  height: 130px;
+  width: 130px;
 }
 
 
