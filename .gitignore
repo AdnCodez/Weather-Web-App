@@ -5,4 +5,10 @@ env
 *.pyc
 __pycache__
 .idea/
+'.idea/Weather-Web-App.iml'
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
 .vscode/
+.vscode/settings.json
