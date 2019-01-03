@@ -74,19 +74,3 @@ def index(request):
     }
     context = {'weather' : weather}
     return render(request, 'Date/index.html', context) #returns the index.html template
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

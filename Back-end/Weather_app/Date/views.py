@@ -6,7 +6,7 @@ import math
 import datetime
 
 
-ls = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+# ls = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
 
 def weather_api(lat, lon, epoch_time):
