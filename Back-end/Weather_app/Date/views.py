@@ -5,6 +5,7 @@ import json
 import math
 import datetime
 
+from .forms import CityForm
 
 # ls = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
 
@@ -34,11 +35,13 @@ def get_location():
   KEY = '3f55b07b200471d3ee97ce323483420208527f68fb6d3f0e57df3db5'
   resp = requests.get('https://api.ipdata.co?api-key={}'.format(KEY), headers=headers)
   response_body = resp.json()
-  latitude = response_body['latitude']
-  longitude = response_body['longitude']
-  city = response_body['city']
+  # latitude = response_body['latitude']
+  latitude = 35.6745
+  # longitude = response_body['longitude']
+  longitude = -6.6323
+  # city = response_body['city']
+  city = 'kenitra'
   return latitude, longitude, city
-
 # def currentTime(par):
 #       current_time = epoch_time()+(86400*par)
 #       return current_time
@@ -132,7 +135,81 @@ def index(request):
       'days_name6': epoch_time_day_name(epoch_time()+(86400*6)),
       # 'weekdays': ls,
     }
-    context = {'weather' : weather}
+    # context = {'weather' : weather}
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        # create a form instance and populate it with data from the request:
+        form = CityForm(request.POST)
+        if form.is_valid():
+            print('\n')
+            name_entered = list(form.cleaned_data.values())[0]
+            print(name_entered)
+            print('\n')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = CityForm()
+
+    context = {'weather' : weather, 'form':form}
+
     return render(request, 'Date/index.html', context) #returns the index.html template
 
 # print(ls.index(epoch_time_day_name(epoch_time())))
+
+# def get_city_name(request):
+#     # if this is a POST request we need to process the form data
+#     if request.method == 'POST':
+#         # create a form instance and populate it with data from the request:
+#         form = CityForm(request.POST)
+#         if form.is_valid():
+#             print('\n')
+#             name_entered = list(form.cleaned_data.values())[0]
+#             print(name_entered)
+#             print('\n')
+
+#     # if a GET (or any other method) we'll create a blank form
+#     else:
+#         form = CityForm()
+
+#     return render(request, 'Date/index.html', {'form': form})
+
+
+# from .forms import CityForm
+
+
+# def get_city(request):
+#     # if this is a POST request we need to process the form data
+#     if request.method == 'POST':
+#         # create a form instance and populate it with data from the request:
+#         form = CityForm(request.POST)
+#         # check whether it's valid:
+#         if form.is_valid():
+#             # process the data in form.cleaned_data as required
+#             # ...
+#             # redirect to a new URL:
+#             print(form)
+#             return HttpResponseRedirect('/thanks/')
+
+#     # if a GET (or any other method) we'll create a blank form
+#     else:
+#         form = CityForm()
+#     return render(request, 'Date/index.html', {'form': form})
+
+# from .forms import NameForm
+
+# def get_name(request):
+#     # if this is a POST request we need to process the form data
+#     if request.method == 'POST':
+#         # create a form instance and populate it with data from the request:
+#         form = NameForm(request.POST)
+#         if form.is_valid():
+#             print('\n')
+#             name_entered = list(form.cleaned_data.values())[0]
+#             print(name_entered)
+#             print('\n')
+
+#     # if a GET (or any other method) we'll create a blank form
+#     else:
+#         form = NameForm()
+
+#     return render(request, 'Date/name.html', {'form': form})

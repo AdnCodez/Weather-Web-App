@@ -34,14 +34,21 @@
       </a>
       </div>
       <div class="item2">
-        <form method="post">
-            <input name='city' class="search" placeholder="{{ weather.city }}" maxlength="19" autocomplete='off'>
+
+
+        <form action="" method="post">
+            {% comment %} <input name='city' class="search" placeholder="{{ weather.city }}" autocomplete='off'> {% endcomment %}
+            {% csrf_token %}
+            {{ form }}
+            {% comment %} <input type="submit" value="OK"> {% endcomment %}
         </form>
+      
+
       </div>
       <div class="icon3">
-      <a href="#">
-          <img src="{% static 'styles/icons/search.svg'%}" alt="search icon" type="submit" class="icon-size hvr-grow-rotate">
-      </a>
+      <button type='submit'>
+          <img src="{% static 'styles/icons/search.svg'%}" alt="search icon" class="icon-size hvr-grow-rotate">
+      </button>
       </div>
       <div class="icon4">
           <a href="#" class="toggle2 toggle--on2"></a>
