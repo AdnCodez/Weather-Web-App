@@ -12,3 +12,5 @@ __pycache__
 .idea/workspace.xml
 .vscode/
 .vscode/settings.json
+./Back-end/Weather_app/Date/cities.db
+cities.db
