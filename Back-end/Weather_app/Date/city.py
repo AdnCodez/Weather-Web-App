@@ -19,4 +19,4 @@ def fun(city_name):
   return ls
 
 
-print(fun('khouribga'))
+print(fun('rabat'))
