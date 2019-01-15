@@ -1,12 +1,11 @@
 # Date/urls.py
 from django.urls import path
 from .views import index
-# from .views import get_name
+from .views import indexTwo
 
 
 urlpatterns = [
     # path('',HomePageView.as_view(), name="home"),
     path('', index),
-    # path('index/', index),
-    # path('', get_name),
+    path('city/', indexTwo),
 ]
