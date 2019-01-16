@@ -1,6 +1,5 @@
 trash/
-Back-end/django_env/
-env
+dj_env/
 *.DS_Store
 *.pyc
 __pycache__

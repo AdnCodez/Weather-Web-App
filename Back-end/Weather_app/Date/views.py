@@ -42,7 +42,7 @@ def get_location():
     # longitude = response_body['longitude']
     longitude = 7.4474
     # city = response_body['city']
-    city = 'berne'
+    city = 'bern'
     return latitude, longitude, city
 #**************************************************************************************
 # def currentTime(par):
