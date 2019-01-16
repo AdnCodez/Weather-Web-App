@@ -52,6 +52,10 @@ body{
   font-size: 1.8rem;
 
 }
+.search_icon{
+  background-image: url(icons/search.svg);
+  border: none;
+}
 .icon2{
   width: 38px;
   align-self: center;
